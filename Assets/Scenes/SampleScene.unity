@@ -385,6 +385,7 @@ GameObject:
   m_Component:
   - component: {fileID: 95323797}
   - component: {fileID: 95323798}
+  - component: {fileID: 95323799}
   m_Layer: 0
   m_Name: Jugador
   m_TagString: Untagged
@@ -459,6 +460,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &95323799
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 95323796}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 00ad2dc6e5829414daa50d048d5f9360, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &124711816
 GameObject:
   m_ObjectHideFlags: 0
@@ -656,17 +677,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2e80bc9f77b21a4c8294fa10508585f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Jugador: {fileID: 413175362}
-  CamaraJuego: {fileID: 519420031}
-  BloquePreFab:
-  - {fileID: 5317775422281470632, guid: 9297ff6fe2091294bbd8f870a80bb4e7, type: 3}
-  - {fileID: 5317775422281470632, guid: b1daa32c68e1ec344b75d8548b21187f, type: 3}
-  - {fileID: 5317775422281470632, guid: 997a261be64e47344b07197af1a99ce4, type: 3}
-  - {fileID: 5317775422281470632, guid: 741c5c2bfe094cb4e8f6f87a6f3c1052, type: 3}
-  PunteroJuego: 0
-  LugarGeneracionSeguro: 12
-  TextoJuego: {fileID: 1093229724}
-  Perdiste: 0
 --- !u!4 &348168137
 Transform:
   m_ObjectHideFlags: 0
@@ -779,10 +789,11 @@ GameObject:
   - component: {fileID: 413175366}
   - component: {fileID: 413175365}
   - component: {fileID: 413175367}
-  - component: {fileID: 413175368}
   - component: {fileID: 413175370}
   - component: {fileID: 413175372}
   - component: {fileID: 413175371}
+  - component: {fileID: 413175374}
+  - component: {fileID: 413175373}
   m_Layer: 0
   m_Name: Jugador
   m_TagString: Untagged
@@ -870,30 +881,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5175d218233623d4cb12eac7ee81965d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FuerzaSalto: 500
-  VelocidadMovimiento: 3
-  TocandoSuelo: 0
-  animador: {fileID: 0}
---- !u!95 &413175368
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 413175362}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 70a3641c25c26a04389e6ebc549539ad, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!82 &413175370
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1041,6 +1028,42 @@ PolygonCollider2D:
       - {x: -0.76973516, y: -0.44511706}
       - {x: 0.72930235, y: -0.42490014}
       - {x: 0.728673, y: 0.71335053}
+--- !u!114 &413175373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 413175362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15eaf9a0d7ecbb245aff5444ff1b0ee2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FuerzaSalto: 600
+  VelocidadMovimiento: 3
+  TocandoSuelo: 0
+  animador: {fileID: 0}
+--- !u!95 &413175374
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 413175362}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 02b1ea4278e1d6641a652b9a8540fbac, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0

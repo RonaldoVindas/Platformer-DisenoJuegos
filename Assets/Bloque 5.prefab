@@ -2299,7 +2299,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2903131231616458395}
-  - component: {fileID: 7634382621190569871}
+  - component: {fileID: 3812035628022061465}
   m_Layer: 0
   m_Name: Bloque 5
   m_TagString: Untagged
@@ -2340,7 +2340,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7634382621190569871
+--- !u!114 &3812035628022061465
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2349,10 +2349,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5317775422281470632}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c4e9adf1b687fb4e8321fe2f2fdd4e1, type: 3}
+  m_Script: {fileID: 11500000, guid: 6dc2a9b6effbdf144a65d8beeb2389df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  "Tama\xF1o": 22
+  "Tama\xF1o": 0
 --- !u!1 &5350505909694700867
 GameObject:
   m_ObjectHideFlags: 0
